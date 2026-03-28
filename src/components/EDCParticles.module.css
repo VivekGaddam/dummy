@@ -1,5 +1,3 @@
-/* EDCParticles.module.css */
-
 .root {
   position: relative;
   width: 100vw;
@@ -7,23 +5,23 @@
   background: #070707;
   overflow: hidden;
   cursor: crosshair;
+  /* CRITICAL FOR MOBILE: Prevents browser refresh/scroll lag */
+  touch-action: none; 
 }
 
-/* ── Canvas ──────────────────────────────────────────────────────────────── */
 .canvas {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* ── Subtitle ────────────────────────────────────────────────────────────── */
 .subtitle {
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'DM Mono', 'Courier New', monospace;
-  font-size: clamp(8px, 1vw, 11px);
+  font-size: clamp(8px, 1.5vw, 11px);
   letter-spacing: 5px;
   color: rgba(255, 255, 255, 0.22);
   white-space: nowrap;
@@ -37,7 +35,6 @@
   opacity: 1;
 }
 
-/* ── Vertical line indicator ─────────────────────────────────────────────── */
 .line {
   position: absolute;
   bottom: 5%;
